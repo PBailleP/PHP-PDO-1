@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $statement->bindValue(':firstName', $firstName, \PDO::PARAM_STR);
     $statement->bindValue(':lastName', $lastName, \PDO::PARAM_STR);
     $statement->execute();
+    header('Location: index.php');
 }
     $queryShow = "SELECT firstname, lastname FROM friend";
     $statementShow = $pdo->query($queryShow);
